@@ -52,7 +52,7 @@ CONFIG(debug, debug|release) {
 }
 
 
-MODULES = utility tcl device gui
+MODULES = utility tcl device gui editor
 
 QT += core widgets xml
 CONFIG += qt thread

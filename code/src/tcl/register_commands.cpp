@@ -10,12 +10,12 @@
 #include "tcl/commands.h"
 
 namespace eda {
-
+  extern int DeviceEditor(ClientData data, Tcl_Interp* interp, int objc, Tcl_Obj* const objv[]);
   Commands gCommands;
 
   int registerAllCmds(Tcl_Interp* interp) {
     Commands::set_interp(interp);
-
+    gCommands.register_cmd(interp, "device_editor", "", DeviceEditor);
     
     return TCL_OK;
   }
